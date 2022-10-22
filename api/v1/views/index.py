@@ -20,7 +20,7 @@ def stats():
     """
     Returns statistics about the number of objects available.
     """
-     total_cls = {"amenities": Amenity,
+    total_cls = {"amenities": Amenity,
                  "cities": City,
                  "places": Place,
                  "reviews": Review,
