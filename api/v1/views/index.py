@@ -20,11 +20,11 @@ def stats():
     """
     Returns statistics about the number of objects available.
     """
-    total_cls = {"amenities": Amenity,
-                 "cities": City,
-                 "places": Place,
-                 "reviews": Review,
-                 "states": State,
-                 "users": User}
-    count = {key: storage.count(val) for key, val in total_cls.items()}
-    return jsonify(count)
+    cls_list = ["Amenity", "City", "Place",
+                "Review", "State", "User"]
+    cls_output = ["amenities", "cities", "places",
+                  "reviews", "states", "users"]
+    cls_count = {}
+    for index in range(len(cls_list)):
+        cls_count[cls_output[index]] = storage.count(cls_list[index])
+    return jsonify(cls_count)
