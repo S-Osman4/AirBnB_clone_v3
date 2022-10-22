@@ -30,5 +30,4 @@ def page_not_found(error):
 if __name__ == "__main__":
     app.run(host=getenv('HBNB_API_HOST'),
             port=getenv('HBNB_API_PORT'),
-            debug = True,
             threaded=True)
