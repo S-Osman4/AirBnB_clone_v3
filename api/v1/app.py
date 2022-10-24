@@ -1,15 +1,19 @@
 #!/usr/bin/python3
-"""Status of API"""
+"""create API with flask"""
 
 from flask import Flask
+from flask import Flask, jsonify, make_response
 from api.v1.views import app_views
 from models import storage
+from models.engine import *
 from os import getenv
+from flask_cors import CORS
 
 
 
 app = Flask(__name__)
 app.register_blueprint(app_views)
+cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
 
 
 
