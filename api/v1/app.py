@@ -2,7 +2,7 @@
 """create API with flask"""
 
 from flask import Flask
-from flask import Flask, jsonify, make_response
+from flask import jsonify, make_response
 from api.v1.views import app_views
 from models import storage
 from models.engine import *
