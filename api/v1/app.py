@@ -17,7 +17,8 @@ cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
 def teardown(error):
     """Call storage.close()"""
     storage.close()
-    
+
+
 @app.errorhandler(404)
 def page_not_found(error):
     """
